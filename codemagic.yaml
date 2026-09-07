@@ -1,0 +1,12 @@
+workflows:
+  android-debug:
+    name: XJeyMods V18 Android
+    instance_type: mac_mini_m2
+    environment:
+      java: 17
+    scripts:
+      - name: Build debug APK
+        script: |
+          gradle --no-daemon clean assembleDebug
+    artifacts:
+      - app/build/outputs/apk/debug/*.apk

@@ -1,0 +1,26 @@
+XJeyMods V18 - GitHub Actions
+
+1. Crea un repositorio NUEVO en GitHub.
+2. Sube TODO el contenido de esta carpeta al repositorio.
+   IMPORTANTE: .github/workflows/android.yml debe quedar exactamente en:
+   .github/workflows/android.yml
+3. En GitHub abre la pestaña Actions.
+4. Selecciona "XJeyMods V18 - Build APK".
+5. Pulsa "Run workflow" y vuelve a pulsar "Run workflow".
+6. Espera a que termine en verde.
+7. Abre la ejecución terminada.
+8. En "Artifacts" aparecerá "XJeyMods-V18-APK".
+9. Pulsa ese archivo para descargarlo. Dentro estará XJeyMods-V18.apk.
+
+También se compila automáticamente cada vez que hagas push a main o master.
+
+NOTA SOBRE FIRMA:
+Este workflow genera una APK Debug instalable. No contiene una clave privada de firma.
+Para una APK Release firmada hay que configurar un keystore de GitHub Secrets.
+
+NOTA SOBRE FIREBASE:
+La validación de KEY depende del backend de Firebase/Cloud Functions. El proyecto incluye
+firebase-backend, pero el despliegue del backend se hace por separado.
+
+SEGURIDAD:
+No subas a GitHub contraseñas, claves privadas, keystores ni secretos de Firebase.
